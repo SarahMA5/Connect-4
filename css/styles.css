@@ -1,0 +1,33 @@
+
+
+#title{
+	background-color:red;
+	align-content: center;
+	font-size: 50px;
+	font-family: "Times-New-Roman";
+	text-align: center;
+}
+
+
+#game-board{
+	text-align: center;
+	background-color: blue;
+	display:inline-block;
+	padding: 15px;
+}
+.dot {
+  height: 100px;
+  width: 100px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin:5px;
+  display: inline-block;
+}
+
+.copyright,.message{
+text-align: center;
+}
+
+body{
+	text-align: center;
+}

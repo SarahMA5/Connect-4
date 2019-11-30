@@ -19,6 +19,8 @@ numberOfRoundsWon:0};
 
 var totalCirclesChecked=0;
 
+var winningPatterns=['first-row','first-column','second-row','second-column','thirs-row','third-column',
+'forth-row','forth-column','first-diagonal','second-diagonal'];
 //------------------------------------------------------------------------------------------------------------------------
 
 
@@ -37,26 +39,24 @@ $(document).ready(function(){
 
       if(turn.numberOfCirclesClicked>=4){
 
-
+		checkForAWinningPattern(this);
  //-----------------------------------------------------
+/*
  var classList=($(this).attr("class").split(/\s+/));
       for(var i=0; i<classList.length; i++) {
       	console.log("inside for loop")
       	switch(classList[i]){
       		case "first-diagonal":{
-      			console.log("inside the first case")
       			var arr=document.querySelectorAll(".first-diagonal");
-      			console.log(arr[2].id);
       			var winningCirclesCounter=0;
       			for(j=0;j<arr.length;j++){
-      				console.log("Now I'm reading "+arr[j].id);
-      				console.log(turn.color);
-      				var currentCircle=arr[j].id;
-      				console.log(arr[j]);
-      				var currentClassList=($(this).attr("class").split(/\s+/));
+      				console.log(arr[j].id)
+      				var currentCircle=(arr[j].id);
+      				console.log($("#"+currentCircle).hasClass(turn.color))
+      				var currentClassList=($("#"+currentCircle).attr("class"));
+      				console.log(currentClassList)
       				if(currentClassList.indexOf(turn.color)!=-1){
       					winningCirclesCounter++;
-      					console.log(winningCirclesCounter);
       					if(winningCirclesCounter==4){
       						console.log(turn.name+" WINS!");
 
@@ -64,6 +64,7 @@ $(document).ready(function(){
       				} // end of outer if statement.
 
       				else{
+      					winningCirclesCounter=0;
       					break;
       				} //end of else clause.
       			} // end of inner for loop (used to check each circle of the line).
@@ -73,7 +74,7 @@ $(document).ready(function(){
 
 
 
-
+*/
 
 
 
@@ -120,3 +121,41 @@ function getCurrentPlayer(){
 		return player2;
 	}
 }
+
+function checkForAWinningPattern(currentC){
+	for(i=0;i<winningPatterns.length;i++){
+	var classList=($(currentC).attr("class").split(/\s+/));
+	if(classList.indexOf[winningPatterns[i]]!=-1){
+
+	var arr=document.querySelectorAll("."+winningPatterns[i]);
+      			var winningCirclesCounter=0;
+      			for(j=0;j<arr.length;j++){
+      				console.log(arr[j].id)
+      				var currentCircle=(arr[j].id);
+      				console.log($("#"+currentCircle).hasClass(turn.color))
+      				var currentClassList=($("#"+currentCircle).attr("class"));
+      				console.log(currentClassList)
+      				if(currentClassList.indexOf(turn.color)!=-1){
+      					winningCirclesCounter++;
+      					if(winningCirclesCounter==4){
+      						console.log(turn.name+" WINS!");
+      						$(".dot").off("click");
+      						return;
+
+      					} //end of inner if statement.
+      				} // end of outer if statement.
+
+      				else{
+      					winningCirclesCounter=0;
+      					break;
+      					return;
+      				} //end of else clause.
+      			} // end of inner for loop (used to check each circle of the line).
+      		} //end of switch case.
+	}
+
+
+
+	}
+
+

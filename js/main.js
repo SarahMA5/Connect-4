@@ -21,6 +21,8 @@ numberOfCirclesClicked:0,
 numberOfRoundsWon:0};
 
 var totalCirclesChecked=0; //will use this variable to check for ties.
+var numberOfTiedRounds=0;
+var hasWinner=false;
 
 var winningPatterns=['first-row','first-column','second-row','second-column','thirs-row','third-column',
 'forth-row','forth-column','first-diagonal','second-diagonal'];
@@ -33,6 +35,9 @@ function main(){
 newGame();
 var turn=player1;
 $(document).ready(function(){
+
+
+
 	$("[id*='circle-']").click(function(){
 		var color=turn.color
       $(this).addClass(color);
@@ -48,10 +53,20 @@ $(document).ready(function(){
 		console.log(turn.name+" WINS!");
       	$(".dot").off("click");
       	turn.numberOfRoundsWon++;
-      	console.log("Player 1 has won: "+player1.numberOfRoundsWon+"\nPlayer 2 has won: "+player2.numberOfRoundsWon);
+      	console.log("Player 1 has won: "+player1.numberOfRoundsWon+"\nPlayer 2 has won: "+player2.numberOfRoundsWon+"\nTies: "+numberOfTiedRounds);
       	alert(turn.name+" WINS!");
+      	hasWinner=true;
       	var newGameButton=$("<br> <button> New Game </button>");
       	$("#container").after(newGameButton);
+      	$("button").mouseenter(function(){
+		$("button").css({"background-color": "red"})
+		});
+
+      	$("button").mouseleave(function(){
+		$("button").css({"background-color": "gray"})
+		});
+
+
       	$("button").click(function(){
 		$("#game-board").empty();
 		main();
@@ -69,8 +84,9 @@ $(document).ready(function(){
       	      		
       } //end of if statement
 
-      if(totalCirclesChecked==16){
+      if(totalCirclesChecked==16&&!(hasWinner)){
       	alert("It's a tie!");
+      	numberOfTiedRounds++;
       	var newGameButton=$("<br> <button> New Game </button>");
       	$("#container").after(newGameButton);
       	$("button").click(function(){
@@ -161,6 +177,7 @@ function checkForAWinningPattern(currentC){
 		player1.numberOfCirclesClicked=0;
 		player2.numberOfCirclesClicked=0;
 		totalCirclesChecked=0;
+		hasWinner=false;
 
 $("#game-board").append("<span class='dot first-row first-column first-diagonal' id='circle-1'></span>");
 $("#game-board").append("<span class='dot first-row second-column'id='circle-2'></span>");

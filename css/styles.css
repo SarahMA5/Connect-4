@@ -24,6 +24,10 @@
   display: inline-block;
 }
 
+.red{
+	background-color: red;
+}
+
 .copyright,.message{
 text-align: center;
 }

@@ -69,8 +69,24 @@ $(document).ready(function(){
       	      		
       } //end of if statement
 
+      if(totalCirclesChecked==16){
+      	alert("It's a tie!");
+      	var newGameButton=$("<br> <button> New Game </button>");
+      	$("#container").after(newGameButton);
+      	$("button").click(function(){
+		$("#game-board").empty();
+		main();
+
+
+		});
+
+      }
+      else{
+
       switchTurns(); //Give the turn to the other player.
+  }
         });
+
 });
 
 

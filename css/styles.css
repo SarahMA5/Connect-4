@@ -28,6 +28,10 @@
 	background-color: red;
 }
 
+.yellow{
+	background-color: yellow;
+}
+
 .copyright,.message{
 text-align: center;
 }

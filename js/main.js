@@ -25,6 +25,7 @@ var winningPatterns=['first-row','first-column','second-row','second-column','th
 
 
 //Let the first turn of the game be player 1's turn.
+
 var turn=player1;
 $(document).ready(function(){
 	$("[id*='circle-']").click(function(){
@@ -33,56 +34,21 @@ $(document).ready(function(){
       updateCounters();
       console.log(turn.numberOfCirclesClicked);
       console.log($(this).attr('id'));
-
      
       $(this).off("click"); //Once the circle is checked, the player can no loger interact with it again.
 
-      if(turn.numberOfCirclesClicked>=4){
+      if(turn.numberOfCirclesClicked>=4){ //if the current player has alredy checked 4 circles or more, check for winning patterns.
 
 		checkForAWinningPattern(this);
  //-----------------------------------------------------
-/*
- var classList=($(this).attr("class").split(/\s+/));
-      for(var i=0; i<classList.length; i++) {
-      	console.log("inside for loop")
-      	switch(classList[i]){
-      		case "first-diagonal":{
-      			var arr=document.querySelectorAll(".first-diagonal");
-      			var winningCirclesCounter=0;
-      			for(j=0;j<arr.length;j++){
-      				console.log(arr[j].id)
-      				var currentCircle=(arr[j].id);
-      				console.log($("#"+currentCircle).hasClass(turn.color))
-      				var currentClassList=($("#"+currentCircle).attr("class"));
-      				console.log(currentClassList)
-      				if(currentClassList.indexOf(turn.color)!=-1){
-      					winningCirclesCounter++;
-      					if(winningCirclesCounter==4){
-      						console.log(turn.name+" WINS!");
-
-      					} //end of inner if statement.
-      				} // end of outer if statement.
-
-      				else{
-      					winningCirclesCounter=0;
-      					break;
-      				} //end of else clause.
-      			} // end of inner for loop (used to check each circle of the line).
-      		} //end of switch case.
-      	} //end of switch.
-} //End of outer for loop
-
-
-
-*/
 
 
 
 
 
-      	//---------------------------------------------------
+//---------------------------------------------------
       	      		
-      }
+      } //end of if statement
 
       switchTurns(); //Give the turn to the other player.
         });
@@ -126,8 +92,8 @@ function checkForAWinningPattern(currentC){
 	for(i=0;i<winningPatterns.length;i++){
 	var classList=($(currentC).attr("class").split(/\s+/));
 	if(classList.indexOf[winningPatterns[i]]!=-1){
-
 	var arr=document.querySelectorAll("."+winningPatterns[i]);
+				console.log("now checking "+winningPatterns[i]+" class")
       			var winningCirclesCounter=0;
       			for(j=0;j<arr.length;j++){
       				console.log(arr[j].id)
@@ -138,6 +104,7 @@ function checkForAWinningPattern(currentC){
       				if(currentClassList.indexOf(turn.color)!=-1){
       					winningCirclesCounter++;
       					if(winningCirclesCounter==4){
+      						console.log("Winning Pattern= "+winningPatterns[i]);
       						console.log(turn.name+" WINS!");
       						$(".dot").off("click");
       						return;

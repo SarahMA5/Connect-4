@@ -11,7 +11,7 @@
 
 #game-board{
 	text-align: center;
-	background-color: blue;
+	background-color: #000080;
 	display:inline-block;
 	padding: 15px;
 }
@@ -20,7 +20,7 @@
   width: 100px;
   background-color: #bbb;
   border-radius: 50%;
-  margin:5px;
+  margin:7px;
   display: inline-block;
 }
 

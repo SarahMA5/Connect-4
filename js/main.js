@@ -49,7 +49,7 @@ var winningPatterns = ['first-row', 'first-column', 'second-row', 'second-column
 function main() { //main function of the game.
     newGame(); //a call to newGame() function that initializes the game board with circles.
     var turn = player1; //By default, give the turn to player 1.
-    $(turn.column).addClass("yourTurn");
+    $("."+turn.column).addClass("yourTurn");
 
     $(document).ready(function () {
 
@@ -204,8 +204,12 @@ function main() { //main function of the game.
 
             }
             else {
+            	if(!(hasWinner)){
+            	    //$("."+turn.column).removeClass("yourTurn");
+                	switchTurns(); //Give the turn to the other player.
+                    //$("."+turn.column).addClass("yourTurn");
+                }
 
-                switchTurns(); //Give the turn to the other player.
             }
         });
 
@@ -217,12 +221,16 @@ function main() { //main function of the game.
     //switchTurns() function will be used to switch the turns between the two players depending on the current player.
 
     function switchTurns() {
+    	$("."+turn.column).removeClass("yourTurn");
+
         if (turn == player1) {
             turn = player2;
         }
         else {
             turn = player1;
         }
+            $("."+turn.column).addClass("yourTurn");
+
     }
 
 

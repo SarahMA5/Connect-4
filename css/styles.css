@@ -1,3 +1,56 @@
+{
+ box-sizing: border-box;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+ float: left;
+ height: 300px; /* Should be removed. Only for demonstration */
+ display:inline;
+ padding:0px;
+ margin:0px;
+
+
+}
+
+.player1, .player2 {
+ border-radius: 3%;
+ background-color: #8580a6;
+ margin-top: 20px;
+ margin-bottom: 5%;
+ width:250px;
+margin: 5px;
+
+
+}
+
+.board {
+ width: 520px;
+ height:550px;
+
+
+
+}
+
+/* Clear floats after the columns */
+.container:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+.container{
+ width: %100;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ margin-top: 1px;
+ margin-bottom: 1px;
+
+
+}
 
 
 #title{
@@ -12,12 +65,15 @@
 #game-board{
 	text-align: center;
 	background-color: #000080;
-	display:inline-block;
-	padding: 15px;
-	  border-radius: 5%;
+	padding: 5%;
+	border-radius: 5%;
+  margin-top: 5px;
+
+
+
 
 }
-.dot {
+.circle {
   height: 100px;
   width: 100px;
   background-color: #bbb;
@@ -36,17 +92,92 @@
 
 .copyright,.message{
 text-align: center;
+color: yellow;
+position: absolute; bottom: 5px; left: 0; right: 0;
+
 }
 
-body{
-	text-align: center;
+.main{
+display: flex;
+flex-direction: column;
+
+
+
+}
+section{
+  display:inline-block;
 }
 
 button{
 		background-color: #000080;
+    font-family: 'Ubuntu', sans-serif;
 		color: white;
-		font-size: 18px;
+		font-size: 25px;
 
 
 }
 
+.announcement{
+  color:black;
+  display: inline-block;
+  font-size: 25px;
+  background-color:pink;
+  padding: 1px;
+  margin: 0px;
+    border-radius: 5px;
+
+
+}
+
+h2,h1,p{
+  text-align:center;
+  font-family: 'Calistoga', cursive;
+
+
+}
+p{
+  color:white;
+}
+
+h1{
+  font-size: 40px;
+  color:white;
+}
+
+.footer{
+  color:yellow;
+  position: absolute; bottom: 3px; left: 0; right: 0;
+
+
+}
+
+.player-img{
+  border-radius: 10px;
+}
+
+img{
+  border-radius: 10px;
+
+}
+
+.player-name{
+}
+
+body{
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+
+}
+
+
+.settings{
+
+}
+
+
+.yourTurn{
+	background-color: blue;
+}

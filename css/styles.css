@@ -53,6 +53,8 @@ margin: 5px;
 }
 
 
+
+
 #title{
 	background-color:red;
 	align-content: center;
@@ -181,3 +183,54 @@ body{
 .yourTurn{
 	background-color: rgba(172, 128, 255,0.4);
 }
+
+
+
+@media screen and (max-width:450px) {
+
+
+  .container {
+    flex-direction:row
+  }
+  .board{
+    order: 1;
+
+  }
+
+
+  .player1{
+    order: 2;
+    width:40%;
+    padding-bottom: 0px;
+
+  }
+    .player2{
+    order: 2;
+    width:40%;
+
+}
+.player1,.player2{
+	height:230px;
+	padding-bottom: 5px;
+}
+
+body,section{
+	display: inline-block;
+}
+
+img{
+	width:50px;
+	height:50px;
+}
+.player-name{
+	font-size: 20px;
+}
+
+button{
+	position: fixed;
+	bottom:500px;
+	right:200px;
+}
+
+   
+   	}

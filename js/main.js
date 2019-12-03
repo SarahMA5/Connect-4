@@ -191,8 +191,10 @@ function main() { //main function of the game.
                 $("section").before(winnerString)
                 //}
                 */
-                var winnerString = "<P class='announcement'>It's a tie!</p>"
-                $(".main").before(winnerString)
+                var winnerString = "<div><P class='announcement'>Draw!</p></div>"
+                $("section").before(winnerString)
+
+
                 var newGameButton = $("<div class='buttonCon'><button> New Game </button></div>");
                 $("body").append(newGameButton);
                 $("button").click(function () {

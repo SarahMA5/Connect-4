@@ -50,9 +50,11 @@ function main() { //main function of the game.
 newGame(); //a call to newGame() function that initializes the game board with circles.
 var resetButton = $("<div class='buttonCon'><button class='buttonCon'> Reset</button></div>");
 $("body").append(resetButton);
+
+//updateRoundCounters();
 var turn = player1; //By default, give the turn to player 1.
 $("."+turn.column).addClass("yourTurn");
-updatePage("begin");         
+//updatePage("begin");         
 
 
 
@@ -64,14 +66,24 @@ $(document).ready(function () {
   $(this).toggleClass('yourTurn');
 });
 
-
+/*
 
 $(".resetButton").click(function () {
-resetGame();
+    location.reload();
 
 
 });
+*/
 
+/*
+
+$(".buttonCon").click(function () {
+console.log("clicked on a button");
+$("#game-board").empty();
+main();
+
+});
+*/
 
 //-----------------------------------------------------------------------------------------------------------------------
 
@@ -100,7 +112,7 @@ $(this).remove();
 $("[id*='circle-']").click(function () {
 var color = turn.color
 var validMove = validatePlayerMove($(this));
-console.log($(this))
+console.log("Clicked Circle= "+$(this).attr('id'))
 var currentlyCheckedCircle = $(this);
 if (!(validMove)) {
 currentlyCheckedCircle = $("#" + nearestValidCircle);
@@ -126,6 +138,8 @@ totalRoundsPlayed++;
 updateRoundCounters();
 updatePage("win");
 
+
+
 } //end of if wininng statement
 } //end of if statement
 
@@ -143,12 +157,22 @@ updatePage("draw");
 
 
 }
+
+
 else {
 if(!(hasWinner)){
 switchTurns(); //Give the turn to the other player.
 }
 
 }
+
+$(".buttonCon").click(function () {
+console.log("clicked on a button");
+$("#game-board").empty();
+main();
+
+});
+//----------end of onClick
 });
 
 });
@@ -233,6 +257,7 @@ player1.numberOfCirclesClicked = 0;
 player2.numberOfCirclesClicked = 0;
 totalCirclesChecked = 0;
 hasWinner = false;
+nearestValidCircle="";
 createBoard();
 
 }
@@ -318,6 +343,7 @@ return true;
 
 }
 nearestValidCircle = associatedCircles[smallestIndex].id;
+console.log (nearestValidCircle)
 return false;
 
 } //end of the function
@@ -348,6 +374,7 @@ return i;
 }
 }
 
+/*
 function resetGame(){
 player1.numberOfRoundsWon=0;
 player2.numberOfRoundsWon=0;
@@ -362,7 +389,8 @@ $("."+turn.column).removeClass('yourTurn');
 $("#game-board").empty();
 main();
 
-}
+}*/
+
 //---------------------------------------------------------------------------------------
 
 function updatePage(gameResult){
@@ -409,7 +437,7 @@ return;
 
 $("."+turn.column).removeClass("yourTurn");
 
-var newGameButton = $("<div class='buttonCon'><button class='buttonCon'> New Game </button></div>");
+    var newGameButton = $("<div><button class='buttonCon'> New Game </button></div>");
 
 
 
@@ -417,12 +445,7 @@ var newGameButton = $("<div class='buttonCon'><button class='buttonCon'> New Gam
 $("body").append(newGameButton);
 
 
-$(".buttonCon").click(function () {
-console.log("clicked on a button");
-$("#game-board").empty();
-main();
 
-});
 
 
 
@@ -430,6 +453,8 @@ main();
 
 }
 //-------------------------------------------------------------------------------------------------------------------------
+
+
 
 } //End of the main() function.
 

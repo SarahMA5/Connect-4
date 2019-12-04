@@ -26,7 +26,7 @@ function createBoard(){
             $("#game-board").append("<span class='circle forth-row third-column' id='circle-15'></span>");
             $("#game-board").append("<span class='circle forth-row first-diagonal forth-column' id='circle-16'></span>");
 
-            $(".circle").on("click");
+            //$(".circle").on("click");
             $("button").remove();
 
       }

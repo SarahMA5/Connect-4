@@ -371,6 +371,7 @@ function main() { //main function of the game.
         var newGameButton = $("<div><button class='buttonCon'> New Game </button></div>");
 
         $("body").append(newGameButton);
+        $("footer").before(newGameButton)
 
     }
     //-------------------------------------------------------------------------------------------------------------------------

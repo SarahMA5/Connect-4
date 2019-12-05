@@ -1,8 +1,8 @@
 # Connect-4
 GA's SEI Course Project #1: Connect 4
 
-<div> <p align="center">
-<img src="images/logo.png" width=1800x height=600px> </img> </p> <div>
+<p align="center">
+<img src="images/logo.png" ></img> </p>
 
 
 ## Installation
@@ -56,16 +56,19 @@ Otherwise, the game will countinue to check until the total number of marked cir
 ## Screenshots
 
 <p align="center">
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 1.png" width=540x height=300px><br>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 2.png" width=540x height=300px><br>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 3.png" width=540x height=300px><br>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 4.png" width=540x height=300px><br>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 5.png" width=540x height=300px><br>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 1.png" width=540x height=300px>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 2.png" width=540x height=300px>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 3.png" width=540x height=300px>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 4.png" width=540x height=300px>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 5.png" width=540x height=300px>
 
  </p>
 
+## Resources
+<a href="https://en.wikipedia.org/wiki/Connect_Four">Connect-4 Wikipedia</a>
 
+<a href="https://github.com/sei-jed-10/W02D04-Jquery">W02D04-jQuery</a>
 
-
+<a href="https://github.com/sei-jed-10/External-Resources">External-Resources</a>
 
 

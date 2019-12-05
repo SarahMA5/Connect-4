@@ -51,7 +51,7 @@ Otherwise, the game will countinue to check until the total number of marked cir
 
 
 ## Video
-[![Alt text](https://i9.ytimg.com/vi/tUMmZ1HWM-k/mqdefault.jpg?time=1575515259116&sqp=CNznoe8F&rs=AOn4CLDu6bHAvfU9lGr0UUnzu2k6YiojwA)](https://youtu.be/tUMmZ1HWM-k)
+[![Alt text](https://i9.ytimg.com/vi/tUMmZ1HWM-k/mqdefault.jpg?time=1575515259116&sqp=CNznoe8F&rs=AOn4CLDu6bHAvfU9lGr0UUnzu2k6YiojwA)](https://www.youtube.com/embed/tUMmZ1HWM-k)
 
 ## Screenshots
 

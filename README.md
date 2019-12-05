@@ -1,9 +1,10 @@
 # Connect-4
 GA's SEI Course Project #1: Connect 4
-<p align="center">
 
-<img src="images/logo.png" width=540x height=300px>
-</p>
+<div> <p align="center">
+<img src="images/logo.png" width=1800x height=600px> </img> </p> <div>
+
+
 ## Installation
 No prior installation is required, the game can be accessed by following this <a href="">link</a>
 
@@ -57,14 +58,13 @@ Otherwise, the game will countinue to check until the total number of marked cir
 
 <p align="center">
 <img align="center" src="images/screenshots/Connect-4 - Screenshot 1.png" width=540x height=300px>
+
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 2.png" width=540x height=300px>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 3.png" width=540x height=300px>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 4.png" width=540x height=300px>
+<img align="center" src="images/screenshots/Connect-4 - Screenshot 5.png" width=540x height=300px>
+
  </p>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 2.png" width=540x height=300px><br>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 3.png" width=540x height=300px><br>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 4.png" width=540x height=300px><br>
-<img align="center" src="images/screenshots/Connect-4 - Screenshot 5.png" width=540x height=300px><br>
-
-
-
 
 
 

@@ -44,11 +44,23 @@ var winningPatterns = ['first-row', 'first-column', 'second-row', 'second-column
 
 //------------------------------------------------------------------------------------------------------------------------
 
-
+function start(){
+    createBoard();
+    $(".circle").off("click");
+   $(".circle").off("hover");
+    $(".buttonALike").click(function() {
+    $(".circle").on("click");
+   $(".circle").on("hover");  
+      $(".buttonALike").remove();
+      
+   main();
+    });
+}
 //Let the first turn of the game be player 1's turn.
 function main() { //main function of the game.
+    if(totalRoundsPlayed>=2){
     newGame(); //a call to newGame() function that initializes the game board with circles.
-    //updateRoundCounters();
+}
     updatePage("begin"); //update the announcement paragraph located just over the game board.        
     var turn = player1; //By default, give the turn to player 1.
     $("." + turn.column).addClass("yourTurn"); //adding a color to the player's column who's supposed to play now.
@@ -252,6 +264,7 @@ function main() { //main function of the game.
             $(".number-of-ties").text("Ties: " + numberOfTiedRounds);
         }
         totalRoundsPlayed++;
+        console.log("totalRoundsPlayed= "+totalRoundsPlayed)
 
     }
 
@@ -370,11 +383,11 @@ function main() { //main function of the game.
 
         var newGameButton = $("<div><button class='buttonCon'> New Game </button></div>");
 
-        $("body").append(newGameButton);
+        //$("body").append(newGameButton);
         $("footer").before(newGameButton)
 
     }
     //-------------------------------------------------------------------------------------------------------------------------
 } //End of the main() function.
 
-main();
+start();

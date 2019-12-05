@@ -151,9 +151,13 @@ h1{
 }
 
 .footer{
-  color:yellow;
-/*  position: absolute; bottom: 3px; left: 0; right: 0;
-*/
+  color:white;
+  font-size:14px;
+  font-weight:600; 
+  padding-top: 1px;
+
+  position: absolute; bottom: 5px; left: 0; right: 0;
+
 
 }
 
@@ -278,4 +282,15 @@ body{
 	  background-image: url('winnerBackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.buttonALike{
+		background-color: #000080;
+		color: yellow;
+
+  display: inline-block;
+  font-size: 25px;
+  padding: 2px;
+  margin: 1px;
+  border-radius: 5px;
 }

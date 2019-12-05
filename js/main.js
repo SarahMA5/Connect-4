@@ -42,6 +42,9 @@ var winningPatterns = ['first-row', 'first-column', 'second-row', 'second-column
     'forth-row', 'forth-column', 'first-diagonal', 'second-diagonal'
 ];
 
+            var audio = new Audio('audio/click.mp3');
+var notify = new Audio('audio/notify.mp3');
+
 //------------------------------------------------------------------------------------------------------------------------
 
 function start(){
@@ -106,7 +109,6 @@ function main() { //main function of the game.
             }
 
             currentlyCheckedCircle.addClass(color); //Mark the circle with the current player's class of color.
-            var audio = new Audio('audio/click.mp3');
             audio.play();
             updateCounters();
             currentlyCheckedCircle.off("click"); //Once the circle is marked, the player can no loger interact with it again.
@@ -118,11 +120,13 @@ function main() { //main function of the game.
                 if (checkForAWinningPattern(this)) { //if a winning pattern was found:
                     $(".circle").off("click"); //Make the board unclickable.
                     turn.numberOfRoundsWon++; //Increment the number of winnings for the player who made that last move.
-                    alert(turn.name + " WINS!");
+                    //alert(turn.name + " WINS!");
                     hasWinner = true; //Set the value to true (this will come in handy when checking for a draw later)
                     updateRoundCounters(); //update round counters visible in the page, for both players.
                     updatePage("win"); //update the announcement paragraph of the page.
                     $("."+turn.column).addClass("winner");
+                        
+                        notify.play();
 
                 } //end of if wininng statement
             } //end of if statement

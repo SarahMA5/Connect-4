@@ -6,7 +6,7 @@ GA's SEI Course Project #1: Connect 4
 
 
 ## Installation
-No prior installation is required, the game can be accessed by following this <a href="">link</a>
+No prior installation is required, the game can be accessed by following this <a href="https://sarahma5.github.io/Connect-4/">link</a>
 
 ## Technologies Used
 * HTML

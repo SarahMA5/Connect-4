@@ -106,6 +106,8 @@ function main() { //main function of the game.
             }
 
             currentlyCheckedCircle.addClass(color); //Mark the circle with the current player's class of color.
+            var audio = new Audio('audio/click.mp3');
+            audio.play();
             updateCounters();
             currentlyCheckedCircle.off("click"); //Once the circle is marked, the player can no loger interact with it again.
 
@@ -131,7 +133,7 @@ function main() { //main function of the game.
             if (totalCirclesChecked == 16 && !(hasWinner)) {
                 numberOfTiedRounds += 1; //increment the number of rounds with no winners.
                 updateRoundCounters(); //update round counters in the page.
-                alert("It's a tie!");
+                alert("Draw !");
                 updatePage("draw"); //update the announcement paragraph of the page.
 
 //-------------------------------------------------------------------------------------------------------------------------

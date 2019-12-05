@@ -65,8 +65,8 @@ Otherwise, the game will countinue to check until the total number of marked cir
  </p>
 
 ## Resources
-<a href="https://en.wikipedia.org/wiki/Connect_Four">Connect-4</a>
-<a href="https://github.com/sei-jed-10/W02D04-Jquery">W02D04-jQuery</a>
-<a href="https://github.com/sei-jed-10/External-Resources">External-Resources</a>
+* <a href="https://en.wikipedia.org/wiki/Connect_Four">Connect-4</a>
+* <a href="https://github.com/sei-jed-10/W02D04-Jquery">W02D04-jQuery</a>
+* <a href="https://github.com/sei-jed-10/External-Resources">External-Resources</a>
 
 

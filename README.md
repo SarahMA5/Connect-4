@@ -6,7 +6,7 @@ GA's SEI Course Project #1: Connect 4
 
 
 ## Installation
-No prior installation is required, the game can be accessed by following this <a href="https://sarahma5.github.io/Connect-4/">link</a>
+No prior installation is required, the game can be accessed by following this <a href="https://sarahv2.github.io/Connect-4/">link</a>
 
 ## Technologies Used
 * HTML
@@ -50,11 +50,8 @@ If the game founds that all 4 circles on that row, column or diagonal line (if i
 Otherwise, the game will countinue to check until the total number of marked circles of the board reaches 16 (since it's a 4x4 board), will check again if the game has a winner, if not then it's a tie and an alert should appear announcing that (along with the announcement message on the page itself and the number of rounds ended up with a draw will be updated both in the code and on the page as well.
 
 
-## Video
-[![Alt text](https://i9.ytimg.com/vi/tUMmZ1HWM-k/mqdefault.jpg?time=1575515259116&sqp=CNznoe8F&rs=AOn4CLDu6bHAvfU9lGr0UUnzu2k6YiojwA)](https://www.youtube.com/embed/tUMmZ1HWM-k)
-
-## Screenshots
-
+<details>
+<summary>Screenshots</summary>
 <p align="center">
 <img align="center" src="images/screenshots/Connect-4 - Screenshot 1.png" width=540x height=300px>
 <img align="center" src="images/screenshots/Connect-4 - Screenshot 2.png" width=540x height=300px>
@@ -63,6 +60,8 @@ Otherwise, the game will countinue to check until the total number of marked cir
 <img align="center" src="images/screenshots/Connect-4 - Screenshot 5.png" width=540x height=300px>
 
  </p>
+</details>
+
 
 ## Resources
 * <a href="https://en.wikipedia.org/wiki/Connect_Four">Connect-4</a>
